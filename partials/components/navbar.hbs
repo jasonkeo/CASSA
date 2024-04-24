@@ -1,0 +1,41 @@
+{{!--
+    Parameters:
+    * navigationLayout ("Stacked", "Logo on the left", "Logo in the middle")
+--}}
+
+<header style="background: ; width: 100%; max-height:500px;" id="gh-head" class="gh-head gh-outer is-head-{{#match navigationLayout "Logo on the left"}}left-logo{{else match navigationLayout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#if isTransparent}} is-head-transparent{{/if}}">
+    <div class="gh-head-inner{{#unless fullWidth}} gh-inner{{/unless}}">
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+                
+            </div>
+            
+            <!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> -->
+            <button class="gh-burger"></button>
+        </div>
+
+        <nav style="display:flex; justify-content: space-between;" class="gh-head-menu">
+            {{navigation}}
+            <div><a href="https://discord.com/invite/Dt4PtWqRVh?ref=cassa.au"><button style="text-align:center; padding: 12px; background-color: #7289da; color: white; border:none; font-size: 15px; border-radius: 10px; font-weight: bold;"> Join Our Discord</button></a></div>
+            
+            {{#unless @site.members_enabled}}
+                {{#match navigationLayout "Stacked"}}
+                    
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> 
+                {{/match}}
+                
+            {{/unless}}
+            
+        </nav>
+
+        
+    </div>
+    
+</header>

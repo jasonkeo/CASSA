@@ -1,0 +1,99 @@
+{{!< default}}
+
+<main class="gh-main">
+    {{> "components/header" layout="wide" background="image" primary=@custom.primary_header secondary=@custom.secondary_header}}
+    
+
+    <section class="gh-archive gh-outer">
+        <div style="color:white;border: grey 4px solid;border-radius: 10px;text-align:center"class="gh-inner">
+            <div class="gh-archive-header">
+                <div style="margin:13px">
+                <a href="/page/2"><h1 style="color:white" class="gh-archive-title">What is CASSA?</h1></a>
+                <p>
+                    CASSA is academic club that acts as a connection hub for Computer Science, Cyber Security, IT students, and tech enthusiasts alike.
+                    
+                    By joining our club, you can expand your network by meeting more like-minded individuals, participate in events, and gain access to resources that will help you in your studies and career.
+                    
+                    Still curious about CASSA?
+                    <br></br>Click <a style="color:rgb(97, 97, 187);text-decoration: underline" href="/about">here</a> to learn more about us or talk to one of our members at our help desk at <a style="text-decoration: underline" href="https://maps.app.goo.gl/D6ZhQREXi12gMt468" target="_blank" >Level 2, Building 18, ECU Joondalup. </a>
+                    <br></br>
+
+                    
+
+                </p>
+            </div>
+            <div style="display:flex; justify-content: center; align-items; center; width:100%;margin-bottom:25px;">
+                    <img style="width:60% ;border-radius: 10px;" src="https://i.ibb.co/LzjNqy4/IMG-2945.jpg" alt="CASSA help desk">
+                    
+            </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="gh-archive gh-outer">
+    
+        <div class=" gh-inner">
+            <header class="gh-archive-header">
+                <a href="/page/2"><h1 class="gh-archive-title">Our Events →</h1></a>
+                
+            </header>
+            <p>Redroom (CTF's) , Learn2linux, Industry Connect and Socials.</p>
+        </div>
+        
+    </section>
+
+
+    
+    
+    {{> "components/list" layout="simple" count="3" showExcerpt=true showPublishedAt=true}}
+    
+
+
+    <section class="gh-archive gh-outer">
+        <div style="color:white;border: grey 4px solid;border-radius: 10px; text-align:center"class="gh-inner">
+            <header class="gh-archive-header">
+                <div style="margin:13px">
+                <a href="/apply"><h1 style="color:white"class="gh-archive-title">Considering joining our comittee?</h1></a>
+                <p> We want you! Every year CASSA needs more and more members as some of our comittee members graduate and have to leave. :( 
+                <br></br> But luckily for you that gives you the opportunity to join our comittee and get involved with the club. For current positions available please check with one our comittee members.  
+                </p>
+               
+                <a  href="/apply"> <button style="border: none;font-size:15px; color:white; background:  #47a864;padding:13px; font-weight:bold; margin-top:10px; margin-bottom:10px; border-radius: 10px;"> LEARN MORE / APPLY FOR COMITTEE </button></a>
+           </div>
+            </header>
+        </div>
+
+
+    </section>
+
+    <section class="gh-archive gh-outer">
+        <div style="color:white;border: grey 4px solid;border-radius: 10px; text-align:center"class="gh-inner">
+            <header class="gh-archive-header">
+                <div style="margin:13px">
+                <a href="/sponsors/"><h1 style="color:white;"class="gh-archive-title">Sponsors</h1></a>
+                <p>At CASSA, we are grateful for our all sponsors who assist us and our members in having the best possible club experience.<br></br>
+                For any enquires, feel free to get in touch with us at <a style="color:rgb(97, 97, 187);text-decoration: underline" href="mailto:contact@cassa.au?subject=Sponsorship inquiry">contact@cassa.au</a>  or click below to learn more about our sponsors. </p>
+            
+            </header>
+            
+            <a  href="/sponsors"> <button style="border-radius: 10px;border: none;font-size:15px; color:white; background:  #116fc0;padding:10px; font-weight:bold; margin-top:10px; margin-bottom:20px;"> LEARN MORE </button></a>
+        </div>
+        </div>
+
+
+    </section>
+
+    <!-- {{#match pagination.pages ">" 1}}
+        <div class="gh-more gh-outer">
+            <div class="gh-inner">
+                
+            </div>
+        </div>
+    {{/match}}-->
+
+    <!-- {{> "components/cta" title=@custom.email_signup_text}} -->
+   
+</main>

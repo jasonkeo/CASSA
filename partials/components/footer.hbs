@@ -1,0 +1,49 @@
+{{!--
+    Parameters:
+    * footerText (text)
+--}}
+
+<footer style="padding-top: 50px; padding-bottom:20px" class="gh-foot gh-outer">
+    <div class="gh-foot-inner gh-inner">
+       <table style="display:flex; justify-content:center; border-top:3px solid grey;">
+
+          <tr>
+
+            <td style='display:flex; justify-content:center;'>
+              <a href="https://instagram.com/ecucassa" target="_blank"><img style="margin: 10px"
+                  src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+
+              <a href="https://www.linkedin.com/company/cassa-ecu/" target="_blank"><img style="margin: 10px"
+                  src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+              <a href="https://www.facebook.com/groups/cassaecu/" target="_blank"><img style="margin: 10px"
+                  src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></a>
+
+            <td>
+          </tr>
+
+          <tr>
+            <td style="text-align: center; color:grey; font-size:small">
+
+              <p>{{@site.title}} &copy; {{date format="YYYY"}} </p>
+              <a style="color:rgb(214, 212, 212);" href="https://maps.app.goo.gl/D6ZhQREXi12gMt468" target="_blank" >Level 2, Building 18, ECU Joondalup. </a> 
+              <br></br>
+
+
+              Want to be receive newsletters from us? <a data-portal><span>Subscribe</span></a> to our mailing list.
+              
+              <br></br>
+            </td>
+
+
+          </tr>
+
+        </table>
+        <!--<div class="gh-copyright">
+            {{#unless footerText}}
+                {{@site.title}} &copy; {{date format="YYYY"}}
+            {{else}}
+                {{footerText}}
+            {{/unless}}
+        </div> -->
+    </div>
+</footer>
