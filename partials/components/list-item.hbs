@@ -1,3 +1,25 @@
+<head>
+ <style>
+        
+       
+
+        .gh-list-item-content::after {
+            
+            border-radius: 10px;
+            
+
+        }
+       
+
+        
+          
+
+
+
+</style>
+
+</head>
+
 <article class="gh-list-item {{post_class}}">
     <a style="border-radius: 10px;"class="gh-list-item-inner" href="{{url}}">
         {{#if feature_image}}
@@ -14,7 +36,7 @@
                 >
             </figure>
         {{/if}}
-        <div class="gh-list-item-content">
+        <div class="gh-list-item-content not">
             {{#if showPrimaryTag}}
                 {{#if primary_tag.name}}
                     <span class="gh-list-item-primary-tag" {{#if primary_tag.accent_color}}style="color: {{primary_tag.accent_color}};"{{/if}}>{{primary_tag.name}}</span>

@@ -2,12 +2,53 @@
     Parameters:
     * navigationLayout ("Stacked", "Logo on the left", "Logo in the middle")
 --}}
+<head>
+<style>
+.gh-head-menu a:not(.discord-button)  {
+  position: relative;
+  opacity: 1;
+}
 
+.gh-head-menu a:not(.discord-button)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgb(33, 165, 253);
+    opacity: 1;
+    bottom: -7px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+.gh-head-menu a:not(.discord-button):hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  
+}
+
+.discord-button {
+  opacity: 1;
+  transition: transform 0.3s ease; /* This makes the change smooth */
+  cursor: pointer;
+}
+
+.discord-button:hover {
+  transform: scale(1.03); /* This enlarges the button to 110% of its original size */
+  opacity: 1;
+}
+
+
+</style>
+</head>
 <header style="background: ; width: 100%; max-height:500px;" id="gh-head" class="gh-head gh-outer is-head-{{#match navigationLayout "Logo on the left"}}left-logo{{else match navigationLayout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#if isTransparent}} is-head-transparent{{/if}}">
     <div class="gh-head-inner{{#unless fullWidth}} gh-inner{{/unless}}">
         <div class="gh-head-brand">
             <div class="gh-head-brand-wrapper">
-                <a class="gh-head-logo" href="{{@site.url}}">
+                <a class="gh-head-logo discord-button" href="{{@site.url}}">
                     {{#if @site.logo}}
                         <img src="{{@site.logo}}" alt="{{@site.title}}">
                     {{else}}
@@ -21,9 +62,9 @@
             <button class="gh-burger"></button>
         </div>
 
-        <nav style="display:flex; justify-content: space-between;" class="gh-head-menu">
+        <nav style="display:flex; justify-content: space-between" class="gh-head-menu">
             {{navigation}}
-            <div><a href="https://discord.com/invite/Dt4PtWqRVh?ref=cassa.au"><button style="text-align:center; padding: 12px; background-color: #7289da; color: white; border:none; font-size: 15px; border-radius: 10px; font-weight: bold;"> Join Our Discord</button></a></div>
+            <div class="discord-button"><a class="discord-button" href="https://discord.com/invite/Dt4PtWqRVh?ref=cassa.au"><button class="discord-button" style="text-align:center; padding: 12px; background-color: #7289da; color: white; border:none; font-size: 15px; border-radius: 10px; font-weight: bold;"> Join Our Discord</button></a></div>
             
             {{#unless @site.members_enabled}}
                 {{#match navigationLayout "Stacked"}}

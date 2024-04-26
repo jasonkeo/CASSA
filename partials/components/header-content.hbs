@@ -1,3 +1,25 @@
+<head>
+<style>
+
+.discord-button {
+  opacity: 1;
+  transition: transform 0.3s ease; /* This makes the change smooth */
+  cursor: pointer;
+}
+
+.discord-button:hover {
+  transform: scale(1.03); /* This enlarges the button to 110% of its original size */
+  opacity: 1;
+}
+
+
+
+
+</style>
+
+
+</head>
+
 <section style="display:flex; align-items: center;justify-content: center;" class="gh-header gh-outer{{#match layout "side"}}{{#match background "image"}} is-side{{/match}}{{/match}}{{#match layout "!=" "side"}}{{#match background "image"}}{{#if @site.cover_image}} has-background-image{{/if}}{{else match background "color"}} has-background-color{{/match}}{{/match}}">
     <div class="gh-header-inner gh-inner">
 
@@ -16,7 +38,7 @@
             {{#if secondary}}
                 <p class="gh-header-secondary">{{secondary}}</p>
             {{/if}}
-            <a  href="/become-a-member/"> <button style="border: none;font-size:19px; color:white; background: #1d4d71;padding:15px; font-weight:bold; margin-top:10px"> REGISTER HERE </button></a>
+            <a class="discord-button" href="/become-a-member/"> <button class="discord-button" style="border: none;font-size:19px; color:white; background: #1d4d71;padding:15px; font-weight:bold; margin-top:10px"> REGISTER HERE </button></a>
             {{#match action "button"}}
                 <a class="gh-header-action gh-header-button gh-btn" href="#">Learn more</a>
             {{else match action "email"}}
